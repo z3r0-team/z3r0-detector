@@ -5,7 +5,8 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Coded%20By-binyourbae-blue?style=flat-square&logo=github" />
-  <img src="https://img.shields.io/badge/Team-%23CianjurHacktivist-green?style=flat-square" />
+  <img src="https://img.shields.io/badge/Team-%23CianjurHacktivist%20x%20z3r0--team!-green?style=flat-square" />
+  <img src="https://img.shields.io/badge/Language-Go-00ADD8?style=flat-square&logo=go" />
 </p>
 
 ---
@@ -19,62 +20,35 @@
 ```
 
 ### ⚡ z3r0-detector
-`z3r0-detector` adalah **tool pendeteksi masif multi-path** berbasis Go, dengan concurrency tinggi menggunakan **goroutine + multi-core** otomatis. Cocok untuk scanning masal target dengan daftar path dan string keyword.
+`z3r0-detector` is a **massive multi-path detection tool** built in Go, optimized with **goroutines + automatic multi-core support**. Perfect for large-scale scanning using target lists, paths, and keyword matches.
 
 ---
 
-### 📦 Fitur Utama
+### 🧪 File Structure
 
-✅ **Goroutine + GOMAXPROCS** → Full multicore  
-✅ **Input custom thread + target list** via prompt  
-✅ **Bypass SSL cert** otomatis  
-✅ **Auto prepend HTTP/HTTPS** jika tidak ada protocol  
-✅ **Timeout request: 7 detik**  
-✅ **Output stylish:**
-
-```
-[FOUND]  site.com/path ~> "keyword" [1/10] + [3/20]
-[ x ]    site.com/path ~> "keyword" [1/10] + [3/20]
-```
-
-✅ **Hasil disimpan otomatis ke:**
-```
-result/found-keyword.txt
-```
-
-✅ **Warna retro hacker:**
-- `[ ]` → Cyan  
-- `site.com` → Hijau (jika ditemukan)  
-- `Not found` → Merah  
-- `(1/10)` → Merah
+| File         | Description                                       |
+|--------------|---------------------------------------------------|
+| `paths.txt`  | List of endpoint paths to scan (`/admin`, `/login`, etc) |
+| `detects.txt`| List of strings/keywords to search in responses   |
+| `main.go`    | The main Go file containing all scanner logic     |
 
 ---
 
-### 🧪 Struktur File
-
-| File         | Fungsi                                          |
-|--------------|-------------------------------------------------|
-| `paths.txt`  | Daftar path endpoint untuk dideteksi (`/admin`, `/wp-login.php`, dll) |
-| `detects.txt`| Keyword / string yang akan dicari dalam response body |
-| `main.go`    | File utama Go dengan semua logika scanning      |
-
----
-
-### 🚀 Cara Jalankan
+### 🚀 How to Run
 
 ```bash
 go run main.go
 ```
 
-Ikuti instruksi input terminal:
+Follow the interactive prompt:
 ```
-Masukkan jumlah thread:
-Masukkan nama file list target:
+Enter number of threads:
+Enter target list filename:
 ```
 
 ---
 
-### 📁 Contoh Struktur File
+### 📁 Example File Content
 
 **detects.txt**
 ```
@@ -99,9 +73,9 @@ https://site3.net
 
 ---
 
-### 💀 Credit
+### 💀 Credits
 
-> 🚩 Coded with ❤️ by `binyourbae` x `#CianjurHacktivist`
+> 🚩 Developed with ❤️ by `binyourbae` x `#CianjurHacktivist x z3r0-team!`
 
 ---
 
